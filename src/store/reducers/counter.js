@@ -17,19 +17,20 @@ export default handleActions({
       num: state.num - 1
     }
   },
-  [ASYNC_INCREMENT] (state, action) {
-    return {
-      ...state,
-      asyncNum: state.asyncNum + action.payload  /// 通过action.payload 的值来对asyncNum 的值进行异步操作
-    }
-  },
   [WANG_NAN_PING] (state) {
     return {
       ...state,
       wang: state.wang + 1
     }
+  },
+  [ASYNC_INCREMENT] (state, action) {
+    return {
+      ...state,
+      asyncNum: state.asyncNum + action.payload  /// 通过action.payload 的值来对asyncNum 的值进行异步操作
+    }
   }
 }, {
   num: 0,
+  wang: 0,
   asyncNum: 0
 })

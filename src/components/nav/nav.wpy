@@ -1,0 +1,67 @@
+<style lang="less">
+  @import "nav";
+</style>
+<template>
+  <view class='home_head'>
+    <view class='box'>
+      <view class='nav'>
+        <repeat   for="{{listData}}" item="item" key="index" index="index">
+          <view class="{{item.status ? 'items items_green':'items'}}">
+            <view>{{item.text}}</view>
+          </view>
+        </repeat>
+
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Nav extends wepy.component {
+    config = {}
+
+    components = {}
+
+    mixins = []
+
+    data = {
+      listData: [
+        {
+          id: '0',
+          text:'正在热映',
+          status: true
+        },
+        {
+          id: '1',
+          text: '即将上映',
+          status: false
+        },
+        {
+          id: '2',
+          text: '新片榜',
+          status: false
+        },
+        {
+          id: '3',
+          text: '口碑榜',
+          status: false
+        },
+      ],
+      navClassStatus: 0,
+      filmData: []
+    }
+
+    computed = {}
+
+    methods = {}
+
+    events = {}
+
+    onLoad() {
+
+    }
+  }
+
+</script>
