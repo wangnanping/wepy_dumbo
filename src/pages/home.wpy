@@ -1,24 +1,29 @@
 <style lang="less">
 </style>
 <template>
-      <nav></nav>
+      <nav :nub="numberVal"></nav>
+      <homeContent :nubVal.sync="numberVal"></homeContent>
 </template>
 
 <script>
     import wepy from 'wepy'
-    import Nav from  '@/components/nav/nav'
+    import Nav from  '@/components/nav/nav' // nav
+    import HomeContent from "@/components/homeContent/homeContent" // content
     export default class Home extends wepy.page {
       config = {
         navigationBarTitleText: 'home'
       }
 
         components = {
-          nav: Nav
+          nav: Nav,
+          homeContent: HomeContent
         }
 
         mixins = []
 
-        data = {}
+        data = {
+           numberVal: 0
+        }
 
         computed = {}
 

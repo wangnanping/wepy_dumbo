@@ -7,10 +7,9 @@
       <view class='nav'>
         <repeat   for="{{listData}}" item="item" key="index" index="index">
           <view class="{{item.status ? 'items items_green':'items'}}">
-            <view>{{item.text}}</view>
+            <view @tap="navActiveStatus({{index}})">{{item.text}}</view>
           </view>
         </repeat>
-
       </view>
     </view>
   </view>
@@ -53,9 +52,26 @@
       filmData: []
     }
 
+    props = {
+      nub: {
+        type: Number,
+        default: 0,
+        twoWay: true
+      }
+    }
     computed = {}
 
-    methods = {}
+    methods = {
+      navActiveStatus(val) {
+        console.log(val);
+        this.listData.forEach((item) => {
+          item.status = false;
+        })
+        this.listData[val].status = true;
+        this.nub = val;
+        this.$apply();
+      }
+    }
 
     events = {}
 

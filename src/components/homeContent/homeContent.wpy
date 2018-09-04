@@ -1,0 +1,38 @@
+<style lang="less">
+
+</style>
+
+<template>
+	<view>{{nubVal}}</view>
+</template>
+
+<script>
+	import wepy from 'wepy'
+
+	export default class HomeContent extends wepy.component {
+		config = {}
+
+		components = {}
+
+		mixins = []
+
+		data = {}
+
+    props = {
+      nubVal: {
+        type: Number,
+        default: 0
+      }
+    }
+
+		computed = {}
+
+		methods = {}
+
+		events = {}
+
+		onLoad() {
+		}
+	}
+
+</script>
