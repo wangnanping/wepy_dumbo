@@ -1,0 +1,33 @@
+<style lang="less">
+</style>
+<template>
+      <nav></nav>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    import Nav from  '@/components/nav/nav'
+    export default class Home extends wepy.page {
+      config = {
+        navigationBarTitleText: 'home'
+      }
+
+        components = {
+          nav: Nav
+        }
+
+        mixins = []
+
+        data = {}
+
+        computed = {}
+
+        methods = {}
+
+        events = {}
+
+        onLoad() {
+
+        }
+    }
+</script>
