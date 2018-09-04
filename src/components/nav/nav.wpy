@@ -63,7 +63,6 @@
 
     methods = {
       navActiveStatus(val) {
-        console.log(val);
         this.listData.forEach((item) => {
           item.status = false;
         })
