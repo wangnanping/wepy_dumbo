@@ -1,38 +1,297 @@
 <style lang="less">
+  .coentent_head_ul {
+    padding : 0 ~"30rpx";
+    .c_li {
+      display         : flex;
+      justify-content : space-between;
+      align-items     : center;
+      padding         : ~"15rpx" 0;
+      border-bottom   : 1px solid #F2F2F2;
+      .c_li_box {
+        display         : flex;
+        justify-content : start;
+        align-items     : center;
+        .film {
+          width  : ~"100rpx";
+          height : ~"140rpx";
+          .film_img {
+            width  : ~"100rpx";
+            height : ~"140rpx";
+          }
+        }
+        .film_msg {
+          margin-left : ~"20rpx";
+          .film_actor {
+            font-size : 12px;
+            color     : #808080;
+            .actor_name {
+              margin-right : ~"6rpx";
+            }
+            .actor_name::after {
+              content : ",";
+            }
+            .actor_name:last-child {
+              &::after {
+                content : "";
+              }
+            }
+          }
+
+          .film_time {
+            font-size : 12px;
+            color     : #AAAAAA;
+          }
+        }
+      }
+      .film_operation {
+        font-size  : 18px;
+        color      : #FFB712;
+        text-align : center;
+        display    : inline-block;
+        .film_grade {
+          margin-bottom : ~"10rpx";
+        }
+        .film_msg_btn {
+          background  : #1BA37E;
+          display     : inline-block;
+          text-align  : center;
+          font-size   : 14px;
+          height      : ~"60rpx";
+          line-height : ~"60rpx";
+          color       : #FFFFFF;
+        }
+      }
+    }
+    .no_data {
+      padding-top : ~"100rpx";
+      text-align: center;
+      .hint_img {
+        width  : ~"570rpx";
+        height : ~"380rpx";
+      }
+      .hint_text{
+        padding: ~"60rpx"  0;
+        color: #1BA37E;
+        font-size:14px;
+      }
+    }
+  }
+
+  .film_white_space {
+    width         : ~"350rpx";
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+  }
+
+  .film_title {
+    font-size : 16px;
+    color     : #000000;
+    //padding-bottom:8rpx;
+  }
+
+  .film_type {
+    font-size : 12px;
+    color     : #808080;
+  }
+
+  .film_icon {
+    font-size : 12px;
+  }
+  .display_none{
+    display: none;
+  }
+
 </style>
 <template>
-      <nav :nub="numberVal"></nav>
-      <homeContent :nubVal.sync="numberVal"></homeContent>
+  <!--<nav :nubVal.sync="numberVal"></nav>-->
+  <!--<homeContent :nubVal.sync="numberVal"></homeContent>-->
+  <view class='home_head'>
+    <view class='box'>
+      <view class='nav'>
+        <repeat   for="{{listData}}" item="item" key="index" index="index">
+          <view class="{{item.status ? 'items items_green':'items'}}">
+            <view @tap="navActiveStatus({{index}})">{{item.text}}</view>
+          </view>
+        </repeat>
+      </view>
+    </view>
+  </view>
+  <view class="coentent_head_ul">
+    {{nubVal}}
+    <repeat for="{{filmData}}" item="item" key="index" index="index">
+      <view class="c_li">
+        <view class='c_li_box'>
+          <view class="film">
+            <image class='film_img'
+                   src="{{navClassStatus !== 3 ? item.images.small : item.subject.images.small}}"></image>
+          </view>
+          <view class='film_msg film_white_space'>
+            <view class='film_title  film_white_space'>{{navClassStatus !== 3 ? item.title : item.subject.title}}</view>
+            <view class='film_type  film_white_space'>
+              {{navClassStatus !== 3 ? item.genres : item.subject.genres}}
+            </view>
+            <view class='film_actor  film_white_space'>主演：
+              <repeat for="{{navClassStatus !== 3 ? item.casts : item.subject.casts}}" item="items" key="index" index="index">
+                <text class="actor_name">{{items.name}}</text>
+              </repeat>
+            </view>
+            <view class='film_time  film_white_space'>
+              时长: {{navClassStatus !== 3 ? item.durations : item.subject.durations}}
+            </view>
+          </view>
+        </view>
+        <view class='film_operation'>
+          <view class="film_grade {{navClassStatus !== 1 ? '': 'display_none'}}">
+            {{navClassStatus !== 3 ? item.rating.average : item.subject.rating.average}}
+            <text class='film_icon'>分</text>
+          </view>
+          <button class='film_msg_btn'>详情</button>
+        </view>
+      </view>
+    </repeat>
+    <loadingBox  class="{{uploadingStatus ? '': 'display_none'}}"></loadingBox>
+    <view class="no_data {{noDataStatus ? '': 'display_none'}}">
+      <image class="hint_img" src="../image/nodatahome.png"></image>
+      <view class="hint_text">数据加载失败!</view>
+    </view>
+  </view>
 </template>
 
 <script>
-    import wepy from 'wepy'
-    import Nav from  '@/components/nav/nav' // nav
-    import HomeContent from "@/components/homeContent/homeContent" // content
-    export default class Home extends wepy.page {
-      config = {
-        navigationBarTitleText: '小象推影'
+  import wepy from "wepy";
+  import Nav from "@/components/nav/nav"; // nav
+//  import HomeContent from "@/components/homeContent/homeContent"; // content
+  import Loading from "@/components/loading/loading";
+
+  let _api = require("../api/api");
+  export default class Home extends wepy.page {
+    config = {
+      navigationBarTitleText: "小象推影"
+    };
+    components = {
+      nav: Nav,
+//      homeContent: HomeContent,
+      loadingBox: Loading
+    };
+    mixins = [];
+    data = {
+      numberVal: 0,
+      filmData: [],
+      navClassStatus: 0,
+      uploadingStatus: true,
+      noDataStatus: false,
+      listData: [
+        {
+          id: '0',
+          text:'正在热映',
+          status: true
+        },
+        {
+          id: '1',
+          text: '即将上映',
+          status: false
+        },
+        {
+          id: '2',
+          text: '新片榜',
+          status: false
+        },
+        {
+          id: '3',
+          text: '口碑榜',
+          status: false
+        },
+      ],
+      navClassStatus: 0
+    };
+    computed = {};
+    methods = {
+      navActiveStatus(val) {
+        this.listData.forEach((item) => {
+          item.status = false;
+        })
+        this.listData[val].status = true;
+        this.navClassStatus = val;
+        this.uploadingStatus = true;
+        this.filmData = [];
+        switch (val) {
+          case 0:
+            this.inTheatersApi();
+            break;
+          case 1:
+            this.comingSoonApi();
+            break;
+          case 2:
+            this.newMoviesApi();
+            break;
+          case 3:
+            this.weeklyApi();
+            break;
+          default:
+            break;
+        }
+        this.$apply();
       }
+    };
+    events = {};
 
-        components = {
-          nav: Nav,
-          homeContent: HomeContent
-        }
-
-        mixins = []
-
-        data = {
-           numberVal: 0
-        }
-
-        computed = {}
-
-        methods = {}
-
-        events = {}
-
-        onLoad() {
-
-        }
+    onLoad() {
+       this.inTheatersApi();
     }
+
+    /*
+*  inTheatersApi 正在热映
+*  comingSoonApi 即将上映
+*  newMoviesApi  新片榜
+*  weeklyApi     口碑
+*/
+    inTheatersApi() {
+      _api.testFun("/v2/movie/in_theaters", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+        } else {
+          this.noDataStatus = true;
+        }
+        this.$apply();
+      });
+    }
+
+    comingSoonApi() {
+      _api.testFun("/v2/movie/coming_soon", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+        } else {
+          this.noDataStatus = true;
+        }
+        this.$apply();
+      });
+    }
+
+    newMoviesApi() {
+      _api.testFun("/v2/movie/new_movies", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+        } else {
+          this.noDataStatus = true;
+        }
+        this.$apply();
+      });
+    }
+
+    weeklyApi() {
+      _api.testFun("/v2/movie/weekly", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+        } else {
+          this.noDataStatus = true;
+        }
+        this.$apply();
+      });
+    }
+  }
 </script>
