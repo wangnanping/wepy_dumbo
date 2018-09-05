@@ -18,7 +18,7 @@
             </view>
             <view class='film_actor  film_white_space'>主演：
               <repeat for="{{navClassStatus !== 3 ? item.casts : item.subject.casts}}" item="items" key="index" index="index">
-              <text class="actor_name">{{items.name}}</text>
+                <text class="actor_name">{{items.name}}</text>
               </repeat>
             </view>
             <view class='film_time  film_white_space'>
@@ -27,103 +27,140 @@
           </view>
         </view>
         <view class='film_operation'>
-          <view class='film_grade' if="{{navClassStatus !== '1'}}">
-            {{navClassStatus !== '3' ? item.rating.average : item.subject.rating.average}}
+          <view class='film_grade' wx:if="{{navClassStatus !== 1}}">
+            {{navClassStatus !== 3 ? item.rating.average : item.subject.rating.average}}
             <text class='film_icon'>分</text>
           </view>
           <button class='film_msg_btn'>详情</button>
         </view>
       </view>
     </repeat>
+    <loadingBox wx:if="{{uploadingStatus}}"></loadingBox>
+    <view class="no_data" wx:if="{{noDataStatus}}">
+       <image class="hint_img" src="../../image/nodatahome.png"></image>
+       <view class="hint_text">数据加载失败!</view>
+    </view>
   </view>
 </template>
 
 <script>
-  import wepy from 'wepy'
+  import wepy from "wepy";
+  import Loading from "@/components/loading/loading";
 
   let _api = require("../../api/api");
   export default class HomeContent extends wepy.component {
-    config = {}
-
-    components = {}
-
-    mixins = []
-
+    config = {};
+    components = {
+      loadingBox: Loading
+    };
+    mixins = [];
     data = {
       filmData: [],
-      navClassStatus: 0
-    }
-
+      navClassStatus: 0,
+      uploadingStatus: false,
+      noDataStatus: false
+    };
     props = {
       nubVal: {
         type: Number,
         default: 0
       }
-    }
-
+    };
     watch = {
       nubVal(newVal, oldVal) {
         this.navClassStatus = newVal;
+        this.uploadingStatus = true;
+        this.filmData = [];
         this.$apply();
         switch (newVal) {
           case 0:
             this.inTheatersApi();
-            break
+            break;
           case 1:
             this.comingSoonApi();
-            break
+            break;
           case 2:
             this.newMoviesApi();
-            break
+            break;
           case 3:
             this.weeklyApi();
-            break
+            break;
           default:
-            break
+            break;
         }
       }
-    }
-
-    computed = {}
+    };
+    computed = {};
+    methods = {};
 
     /*
-    *  methods 事件作用
-    *  inTheatersApi 正在热映
-    *  comingSoonApi 即将上映
-    *  newMoviesApi  新片榜
-    *  weeklyApi     口碑
-     */
-    methods = {
-      inTheatersApi() {
-        _api.testFun("/v2/movie/in_theaters", "GET", null, (err, res) => {
-          console.log(res);
+	 *  inTheatersApi 正在热映
+	 *  comingSoonApi 即将上映
+	 *  newMoviesApi  新片榜
+	 *  weeklyApi     口碑
+		*/
+    inTheatersApi() {
+      _api.testFun("/v2/movie/in_theaters", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        this.$apply();
+        if (res.statusCode === 200) {
           this.filmData = res.data.subjects;
-        })
-      },
-      comingSoonApi() {
-        _api.testFun("/v2/movie/coming_soon", "GET", null, (err, res) => {
-          this.filmData = res.data.subjects;
-        })
-      },
-      newMoviesApi() {
-        _api.testFun("/v2/movie/new_movies", "GET", null, (err, res) => {
-          this.filmData = res.data.subjects;
-        })
-      },
-      weeklyApi() {
-        _api.testFun("/v2/movie/weekly", "GET", null, (err, res) => {
-          this.filmData = res.data.subjects;
-        })
-      }
+          this.$apply();
+        } else {
+          this.noDataStatus = true;
+          this.$apply();
+        }
+      });
     }
 
-    events = {}
+    comingSoonApi() {
+      _api.testFun("/v2/movie/coming_soon", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        this.$apply();
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+          this.$apply();
+        } else {
+          this.noDataStatus = true;
+          this.$apply();
+        }
+      });
+    }
+
+    newMoviesApi() {
+      _api.testFun("/v2/movie/new_movies", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        this.$apply();
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+          this.$apply();
+        } else {
+          this.noDataStatus = true;
+          this.$apply();
+        }
+      });
+    }
+
+    weeklyApi() {
+      _api.testFun("/v2/movie/weekly", "GET", null, (err, res) => {
+        this.uploadingStatus = false;
+        this.$apply();
+        if (res.statusCode === 200) {
+          this.filmData = res.data.subjects;
+          this.$apply();
+        } else {
+          this.noDataStatus = true;
+          this.$apply();
+        }
+      });
+    }
+
+    events = {};
 
     onLoad() {
-      _api.testFun("/v2/movie/in_theaters", "GET", null, (err, res) => {
-        this.filmData = res.data.subjects;
-        this.$apply();
-      })
+      this.uploadingStatus = true;
+      this.$apply();
+      this.inTheatersApi();
     }
   }
 

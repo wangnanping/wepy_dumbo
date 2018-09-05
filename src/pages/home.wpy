@@ -11,7 +11,7 @@
     import HomeContent from "@/components/homeContent/homeContent" // content
     export default class Home extends wepy.page {
       config = {
-        navigationBarTitleText: 'home'
+        navigationBarTitleText: '小象推影'
       }
 
         components = {

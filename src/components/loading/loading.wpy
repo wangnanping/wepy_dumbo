@@ -1,0 +1,101 @@
+<style lang="less">
+  .loader-line-bounce {
+    width: ~'140rpx';
+    height: ~'80rpx';
+    font-size: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    margin: auto;
+    text {
+      width: ~'10rpx';
+      height: ~'80rpx';
+      background: #1abc9c;
+      border-radius: ~'50rpx';
+      display: inline-block;
+      margin-right: ~'8rpx';
+      -webkit-animation: line-bounce 1s ease infinite;
+      animation: line-bounce 1s ease infinite;
+    }
+  }
+
+  .loader-line-bounce text:nth-child(1) {
+    -webkit-animation-delay: -.65s;
+    animation-delay: -.65s;
+  }
+  .loader-line-bounce text:nth-child(2) {
+    -webkit-animation-delay: -.78s;
+    animation-delay: -.78s;
+  }
+  .loader-line-bounce text:nth-child(3) {
+    -webkit-animation-delay: -.91s;
+    animation-delay: -.91s;
+  }
+  .loader-line-bounce text:nth-child(4) {
+    -webkit-animation-delay: -.78s;
+    animation-delay: -78s;
+  }
+  .loader-line-bounce text:nth-child(5) {
+    -webkit-animation-delay: -.65s;
+    animation-delay: -.65s;
+    margin-right: 0;
+  }
+  @keyframes line-bounce {
+    0% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+    50% {
+      -webkit-transform: scaleY(.2);
+      transform: scaleY(.2);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+  @-webkit-keyframes line-bounce {
+    0% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+    50% {
+      -webkit-transform: scaleY(.2);
+      transform: scaleY(.2);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  }
+</style>
+
+<template>
+  <view class="loader-line-bounce">
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</template>
+
+<script>
+	import wepy from 'wepy'
+
+	export default class Loading extends wepy.component {
+		config = {}
+		components = {}
+		mixins = []
+		data = {}
+		computed = {}
+		methods = {}
+		events = {}
+		onLoad() {
+		}
+	}
+
+</script>
