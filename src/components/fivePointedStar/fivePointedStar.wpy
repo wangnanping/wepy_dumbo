@@ -1,0 +1,55 @@
+<style lang="less">
+  .star-vote{
+    width:~'400rpx';
+    height:~'60rpx';
+    position:relative;
+    overflow:hidden;
+    .star_five {
+      position          : absolute;
+      width             : ~'400rpx';
+      height            : ~'60rpx';
+      background-size   : cover;
+      background-repeat : no-repeat;
+      left              : 0;
+      top               : 0;
+    }
+    /*.add-star{*/
+      /*background-image:url("../../image/fivepointedstarstart.png");*/
+    /*}*/
+    /*.del-star{*/
+      /*background-image:url("../../image/fivepointedstarend.png");*/
+      /*background-color:white;*/
+    /*}*/
+  }
+
+</style>
+
+<template>
+
+  <view  class="star-vote">
+    <image src="../../image/fivepointedstarstart.png"></image>
+    <image class="hint_img" src="../image/nodatahome.png"></image>
+    <text  class="add-star"></text>
+    <text  class="del-star"  style="backgroundPosition:~'-{{(leftVal*400)/10}}rpx';left:~'{{leftVal}}rpx'"></text>
+  </view>
+</template>
+
+<script>
+	import wepy from 'wepy'
+
+	export default class FiveStart extends wepy.component {
+		config = {}
+		components = {}
+		mixins = []
+		data = {
+      leftVal: 5
+    }
+		computed = {}
+		methods = {}
+		events = {}
+
+		onLoad() {
+		}
+	}
+
+</script>

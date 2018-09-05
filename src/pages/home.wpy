@@ -1,4 +1,40 @@
 <style lang="less">
+  .home_head{
+    position:relative;
+    text-align: center;
+    padding: ~'15rpx' 0;
+    border-bottom:1px solid #F3F3F3;
+    .box{
+      margin: 0 auto;
+      padding:0 ~'30rpx';
+      .nav{
+        display: flex;
+        justify-content: start;
+        border:1px solid #1BA37E;
+        border-radius: 4px;
+        overflow: hidden;
+        .items{
+          width:25%;
+          color:#66C1A8;
+          height:~'58rpx';
+          line-height: ~'58rpx';
+          font-size:~'28rpx';
+          border-right:1px solid #66C1A8;
+        }
+        .items:last-child{
+          border:none;
+        }
+        .items_green{
+          background: #1BA37E;
+          color:#FFF;
+        }
+      }
+    }
+  }
+
+
+
+
   .coentent_head_ul {
     padding : 0 ~"30rpx";
     .c_li {
@@ -104,8 +140,6 @@
 
 </style>
 <template>
-  <!--<nav :nubVal.sync="numberVal"></nav>-->
-  <!--<homeContent :nubVal.sync="numberVal"></homeContent>-->
   <view class='home_head'>
     <view class='box'>
       <view class='nav'>
@@ -146,7 +180,7 @@
             {{navClassStatus !== 3 ? item.rating.average : item.subject.rating.average}}
             <text class='film_icon'>分</text>
           </view>
-          <button class='film_msg_btn'>详情</button>
+          <button class='film_msg_btn' @tap="skipUrl()">详情</button>
         </view>
       </view>
     </repeat>
@@ -160,8 +194,6 @@
 
 <script>
   import wepy from "wepy";
-  import Nav from "@/components/nav/nav"; // nav
-//  import HomeContent from "@/components/homeContent/homeContent"; // content
   import Loading from "@/components/loading/loading";
 
   let _api = require("../api/api");
@@ -170,8 +202,6 @@
       navigationBarTitleText: "小象推影"
     };
     components = {
-      nav: Nav,
-//      homeContent: HomeContent,
       loadingBox: Loading
     };
     mixins = [];
@@ -232,6 +262,9 @@
             break;
         }
         this.$apply();
+      },
+      skipUrl() {
+        wx.navigateTo({url: 'details'})
       }
     };
     events = {};

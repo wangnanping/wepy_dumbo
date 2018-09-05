@@ -1,0 +1,28 @@
+<style lang="less">
+
+</style>
+
+<template>
+	<view>内容</view>
+  <fivePointe></fivePointe>
+</template>
+
+<script>
+	import wepy from 'wepy'
+  import FivePointe from "@/components/fivePointedStar/fivePointedStar"
+	export default class Details extends wepy.page {
+		config = {}
+		components = {
+      fivePointe: FivePointe
+    }
+		mixins = []
+		data = {}
+		computed = {}
+		methods = {}
+		events = {}
+
+		onLoad() {
+		}
+	}
+
+</script>
