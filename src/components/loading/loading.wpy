@@ -1,7 +1,8 @@
 <style lang="less">
+  @rpx: 1rpx;
   .loader-line-bounce {
-    width: ~'140rpx';
-    height: ~'80rpx';
+    width: 140/@rpx;
+    height: 80/@rpx;
     font-size: 0;
     text-align: center;
     position: fixed;
@@ -11,12 +12,12 @@
     left:0;
     margin: auto;
     text {
-      width: ~'10rpx';
-      height: ~'80rpx';
+      width: 10/@rpx;
+      height: 80/@rpx;
       background: #1abc9c;
-      border-radius: ~'50rpx';
+      border-radius: 50/@rpx;
       display: inline-block;
-      margin-right: ~'8rpx';
+      margin-right: 8/@rpx;
       -webkit-animation: line-bounce 1s ease infinite;
       animation: line-bounce 1s ease infinite;
     }

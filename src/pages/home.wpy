@@ -1,12 +1,13 @@
 <style lang="less">
+  @rpx: 1rpx;
   .home_head{
     position:relative;
     text-align: center;
-    padding: ~'15rpx' 0;
+    padding: 15/@rpx 0;
     border-bottom:1px solid #F3F3F3;
     .box{
       margin: 0 auto;
-      padding:0 ~'30rpx';
+      padding:0 30/@rpx;
       .nav{
         display: flex;
         justify-content: start;
@@ -16,9 +17,9 @@
         .items{
           width:25%;
           color:#66C1A8;
-          height:~'58rpx';
-          line-height: ~'58rpx';
-          font-size:~'28rpx';
+          height:58/@rpx;
+          line-height: 58/@rpx;
+          font-size:28/@rpx;
           border-right:1px solid #66C1A8;
         }
         .items:last-child{
@@ -36,32 +37,32 @@
 
 
   .coentent_head_ul {
-    padding : 0 ~"30rpx";
+    padding : 0 30/@rpx;
     .c_li {
       display         : flex;
       justify-content : space-between;
       align-items     : center;
-      padding         : ~"15rpx" 0;
+      padding         : 15/@rpxv 0;
       border-bottom   : 1px solid #F2F2F2;
       .c_li_box {
         display         : flex;
         justify-content : start;
         align-items     : center;
         .film {
-          width  : ~"100rpx";
-          height : ~"140rpx";
+          width  : 100/@rpx;
+          height : 40/@rpx;
           .film_img {
-            width  : ~"100rpx";
-            height : ~"140rpx";
+            width  : 100/@rpx;
+            height : 140/@rpx;
           }
         }
         .film_msg {
-          margin-left : ~"20rpx";
+          margin-left : 20/@rpx;
           .film_actor {
             font-size : 12px;
             color     : #808080;
             .actor_name {
-              margin-right : ~"6rpx";
+              margin-right : 6/@rpx;
             }
             .actor_name::after {
               content : ",";
@@ -85,28 +86,28 @@
         text-align : center;
         display    : inline-block;
         .film_grade {
-          margin-bottom : ~"10rpx";
+          margin-bottom : 10/@rpx;
         }
         .film_msg_btn {
           background  : #1BA37E;
           display     : inline-block;
           text-align  : center;
           font-size   : 14px;
-          height      : ~"60rpx";
-          line-height : ~"60rpx";
+          height      : 60/@rpx;
+          line-height : 60/@rpx;
           color       : #FFFFFF;
         }
       }
     }
     .no_data {
-      padding-top : ~"100rpx";
+      padding-top : 100/@rpx;
       text-align: center;
       .hint_img {
-        width  : ~"570rpx";
-        height : ~"380rpx";
+        width  : 570/@rpx;
+        height : 380/@rpx;
       }
       .hint_text{
-        padding: ~"60rpx"  0;
+        padding: 60/@rpx  0;
         color: #1BA37E;
         font-size:14px;
       }
@@ -114,7 +115,7 @@
   }
 
   .film_white_space {
-    width         : ~"350rpx";
+    width         : 350/@rpx;
     overflow      : hidden;
     text-overflow : ellipsis;
     white-space   : nowrap;
