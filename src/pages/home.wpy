@@ -42,7 +42,7 @@
       display         : flex;
       justify-content : space-between;
       align-items     : center;
-      padding         : 15/@rpxv 0;
+      padding         : 15/@rpx 0;
       border-bottom   : 1px solid #F2F2F2;
       .c_li_box {
         display         : flex;
@@ -50,7 +50,6 @@
         align-items     : center;
         .film {
           width  : 100/@rpx;
-          height : 40/@rpx;
           .film_img {
             width  : 100/@rpx;
             height : 140/@rpx;
@@ -119,6 +118,7 @@
     overflow      : hidden;
     text-overflow : ellipsis;
     white-space   : nowrap;
+    margin-bottom:8/@rpx;
   }
 
   .film_title {
@@ -246,6 +246,7 @@
         this.navClassStatus = val;
         this.uploadingStatus = true;
         this.filmData = [];
+        this.noDataStatus = false;
         switch (val) {
           case 0:
             this.inTheatersApi();

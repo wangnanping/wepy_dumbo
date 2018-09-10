@@ -1,55 +1,71 @@
 <style lang="less">
-  .star-vote{
-    width:~'400rpx';
-    height:~'60rpx';
-    position:relative;
-    overflow:hidden;
-    .star_five {
-      position          : absolute;
-      width             : ~'400rpx';
-      height            : ~'60rpx';
-      background-size   : cover;
-      background-repeat : no-repeat;
-      left              : 0;
-      top               : 0;
+  @rpx : 1rpx;
+  .star_vote{
+     width: 260/@rpx;
+     /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*align-items: center;*/
+     /*border:1px solid red;*/
+    .star_times{
+      width: 26/@rpx;
+      height: 26/@rpx;
     }
-    /*.add-star{*/
-      /*background-image:url("../../image/fivepointedstarstart.png");*/
-    /*}*/
-    /*.del-star{*/
-      /*background-image:url("../../image/fivepointedstarend.png");*/
-      /*background-color:white;*/
-    /*}*/
+    .show_style{
+       display: none;
+    }
   }
-
 </style>
 
 <template>
-
-  <view  class="star-vote">
-    <image src="../../image/fivepointedstarstart.png"></image>
-    <image class="hint_img" src="../image/nodatahome.png"></image>
-    <text  class="add-star"></text>
-    <text  class="del-star"  style="backgroundPosition:~'-{{(leftVal*400)/10}}rpx';left:~'{{leftVal}}rpx'"></text>
+  <view class="star_vote">
+    <repeat for="{{5}}" key="index" key="index" item="item">
+      {{index}}
+      <image class="{{starVal >= index+1.5  ? 'star_times' : 'show_style'}}" src="../../image/star-full-new.png"></image>
+      <image class="{{starVal > 0 && starVal <= index+1.5 ? 'star_times' : 'show_style'}}" src="../../image/star-half-new.png"></image>
+      <image class="{{starVal === 0 || starVal < index+1 ? 'star_times' : 'show_style'}}" src="../../image/star-empty-new.png"></image>
+    </repeat>
   </view>
 </template>
 
 <script>
-	import wepy from 'wepy'
+  import wepy from "wepy";
 
-	export default class FiveStart extends wepy.component {
-		config = {}
-		components = {}
-		mixins = []
-		data = {
-      leftVal: 5
+  export default class FiveStart extends wepy.component {
+    config = {};
+    components = {};
+    mixins = [];
+    data = {
+      starList: [
+        {
+          status: 1
+        },
+        {
+          status: 2
+        },
+        {
+          status: 3
+        },
+        {
+          status: 4
+        },
+        {
+          status: 5
+        }
+      ]
     }
-		computed = {}
-		methods = {}
-		events = {}
-
-		onLoad() {
-		}
-	}
+    props = {
+      starVal: {
+        type: Number,
+        default: 1,
+        twoWay: true
+      }
+    }
+    computed = {};
+    methods = {};
+    events = {};
+    onLoad() {
+      console.log(this.starVal);
+    }
+  }
 
 </script>

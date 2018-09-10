@@ -3,8 +3,7 @@
 </style>
 
 <template>
-	<view>内容</view>
-  <fivePointe></fivePointe>
+  <fivePointe :starVal="twoWayStar"></fivePointe>
 </template>
 
 <script>
@@ -12,13 +11,22 @@
   import FivePointe from "@/components/fivePointedStar/fivePointedStar"
 	export default class Details extends wepy.page {
 		config = {}
+
 		components = {
       fivePointe: FivePointe
     }
+
+
 		mixins = []
-		data = {}
+
+		data = {
+      twoWayStar: 2
+    }
+
 		computed = {}
+
 		methods = {}
+
 		events = {}
 
 		onLoad() {
