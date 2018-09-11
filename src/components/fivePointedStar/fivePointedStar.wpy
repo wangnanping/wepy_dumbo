@@ -19,10 +19,9 @@
 <template>
   <view class="star_vote">
     <repeat for="{{5}}" key="index" key="index" item="item">
-      {{index}}
-      <image class="{{starVal >= index+1.5  ? 'star_times' : 'show_style'}}" src="../../image/star-full-new.png"></image>
-      <image class="{{starVal > 0 && starVal <= index+1.5 ? 'star_times' : 'show_style'}}" src="../../image/star-half-new.png"></image>
-      <image class="{{starVal === 0 || starVal < index+1 ? 'star_times' : 'show_style'}}" src="../../image/star-empty-new.png"></image>
+      <image class="{{starVal > (index+1)*2 -1 ? 'star_times' : 'show_style'}}" src="../../image/star-full-new.png"></image>
+      <image class="{{starVal > (index+1)*2 - 2 &&  starVal <= (index+1)*2 -1 ? 'star_times' : 'show_style'}}" src="../../image/star-half-new.png"></image>
+      <image class="{{starVal === 0 || starVal <= (index+1)*2-2 ? 'star_times' : 'show_style'}}" src="../../image/star-empty-new.png"></image>
     </repeat>
   </view>
 </template>
@@ -35,36 +34,17 @@
     components = {};
     mixins = [];
     data = {
-      starList: [
-        {
-          status: 1
-        },
-        {
-          status: 2
-        },
-        {
-          status: 3
-        },
-        {
-          status: 4
-        },
-        {
-          status: 5
-        }
-      ]
     }
     props = {
       starVal: {
         type: Number,
-        default: 1,
-        twoWay: true
+        default: 0
       }
     }
     computed = {};
     methods = {};
     events = {};
     onLoad() {
-      console.log(this.starVal);
     }
   }
 

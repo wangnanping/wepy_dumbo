@@ -3,7 +3,7 @@
 </style>
 
 <template>
-  <fivePointe :starVal="twoWayStar"></fivePointe>
+  <fivePointe :starVal.sync="twoWayStar"></fivePointe>
 </template>
 
 <script>
@@ -20,7 +20,7 @@
 		mixins = []
 
 		data = {
-      twoWayStar: 2
+      twoWayStar: 3
     }
 
 		computed = {}
@@ -29,8 +29,14 @@
 
 		events = {}
 
-		onLoad() {
+		onLoad(option) {
+		   this.setTwoWayStar(option);
 		}
+		setTwoWayStar(val) {
+      this.twoWayStar = val.num;
+      console.log(this.twoWayStar);
+      this.$apply();
+    }
 	}
 
 </script>
