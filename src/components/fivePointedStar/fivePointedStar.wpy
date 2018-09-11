@@ -1,0 +1,55 @@
+<style lang="less">
+  @rpx : 1rpx;
+  .star_vote{
+     width: 240/@rpx;
+    .star_times{
+      width: 26/@rpx;
+      height: 26/@rpx;
+      margin-left:8/@rpx;
+    }
+    .show_style{
+       display: none;
+    }
+    .num{
+      margin-left: 10/@rpx;
+      font-size: 16px;
+      color: #ffc600;
+      font-weight: bold;
+    }
+  }
+</style>
+
+<template>
+  <view class="star_vote">
+    <repeat for="{{5}}" key="index" key="index" item="item">
+      <image class="{{starVal > (index+1)*2 -1 ? 'star_times' : 'show_style'}}" src="../../image/star-full-new.png"></image>
+      <image class="{{starVal > (index+1)*2 - 2 &&  starVal <= (index+1)*2 -1 ? 'star_times' : 'show_style'}}" src="../../image/star-half-new.png"></image>
+      <image class="{{starVal === 0 || starVal <= (index+1)*2-2 ? 'star_times' : 'show_style'}}" src="../../image/star-empty-new.png"></image>
+    </repeat>
+    <text class="num">9.9</text>
+  </view>
+</template>
+
+<script>
+  import wepy from "wepy";
+
+  export default class FiveStart extends wepy.component {
+    config = {};
+    components = {};
+    mixins = [];
+    data = {
+    }
+    props = {
+      starVal: {
+        type: Number,
+        default: 0
+      }
+    }
+    computed = {};
+    methods = {};
+    events = {};
+    onLoad() {
+    }
+  }
+
+</script>
