@@ -181,7 +181,7 @@
             {{navClassStatus !== 3 ? item.rating.average : item.subject.rating.average}}
             <text class='film_icon'>分</text>
           </view>
-          <button class='film_msg_btn' @tap="skipUrl({{item.rating.average}}, {{item.subject.rating.average}})">详情</button>
+          <button class='film_msg_btn' @tap="skipUrl({{item}})">详情</button>
         </view>
       </view>
     </repeat>
@@ -265,11 +265,12 @@
         }
         this.$apply();
       },
-      skipUrl(val, valTwo) {
+      skipUrl(val) {
         let num = '';
-        this.navClassStatus !== 3 ? num = val : num = valTwo;
-        console.log(num);
-        wx.navigateTo({url: `details?num=${num}`})
+        let title = '';
+        this.navClassStatus !== 3 ? num = val.rating.average : num = val.subject.rating.average;
+        this.navClassStatus !== 3 ? title = val.title : title = val.subject.title;
+        wx.navigateTo({url: `details?num=${num}&title=${title}`})
       }
     };
     events = {};

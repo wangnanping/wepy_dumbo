@@ -1,17 +1,20 @@
 <style lang="less">
   @rpx : 1rpx;
   .star_vote{
-     width: 260/@rpx;
-     /*display: flex;*/
-    /*justify-content: flex-start;*/
-    /*align-items: center;*/
-     /*border:1px solid red;*/
+     width: 240/@rpx;
     .star_times{
       width: 26/@rpx;
       height: 26/@rpx;
+      margin-left:8/@rpx;
     }
     .show_style{
        display: none;
+    }
+    .num{
+      margin-left: 10/@rpx;
+      font-size: 16px;
+      color: #ffc600;
+      font-weight: bold;
     }
   }
 </style>
@@ -23,6 +26,7 @@
       <image class="{{starVal > (index+1)*2 - 2 &&  starVal <= (index+1)*2 -1 ? 'star_times' : 'show_style'}}" src="../../image/star-half-new.png"></image>
       <image class="{{starVal === 0 || starVal <= (index+1)*2-2 ? 'star_times' : 'show_style'}}" src="../../image/star-empty-new.png"></image>
     </repeat>
+    <text class="num">9.9</text>
   </view>
 </template>
 
