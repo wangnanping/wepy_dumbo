@@ -53,6 +53,7 @@
     }
     .text_introduce{
       border-bottom:1px solid #e5e5e5;
+      margin-bottom:40/@rpx;
       .text_content{
         font-size: 16px;
         padding: 20/@rpx;
@@ -67,6 +68,33 @@
         text-align: center;
         color:#aaa;
         padding:20/@rpx 0;
+      }
+    }
+    .actor_list{
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding:20/@rpx 0;
+      display: flex;
+      justify-content: flex-start;
+      border-top:1px solid #e5e5e5;
+      border-bottom:1px solid #e5e5e5;
+      .content{
+        margin-left:20/@rpx;
+        .img{
+          width:80/@rpx;
+          height:120/@rpx;
+          background: bisque;
+        }
+        .actor_name{
+           font-size:14px;
+        }
+        .actor_role{
+          font-size:14px;
+          color:#999;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
       }
     }
   }
@@ -98,14 +126,17 @@
        <view class="icon_box"><i class="{{cutContentStatus ? 'iconfont icon-jiantouxia': 'iconfont icon-jiantoushang'}}" @tap="cut()"></i></view>
      </view>
 
-    <swiper class="swiper_box" autoplay="true" wx:key="id" interval="3000" duration="1000" bindchange="0" circular="true">
-      <repeat for="{{20}}" key="index" index="index">
-        <swiper-item>
-          {{index}}
-          <view  class="slide-image"  style="width:750/@rpx;height:375/@rpx;background: red;"></view>
-        </swiper-item>
-      </repeat>
-    </swiper>
+     <view class="actor_list">
+       <repeat for="{{200}}" index="index" key="index">
+         <view class="content">
+           <view class="img">
+
+           </view>
+           <text class="actor_name">王南坪</text>
+           <text class="actor_role">余文乐</text>
+         </view>
+       </repeat>
+     </view>
 
 
   </view>
