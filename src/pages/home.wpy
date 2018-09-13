@@ -141,6 +141,7 @@
 
 </style>
 <template>
+  <i class="icon iconfont icon-jiantoushang"></i>
   <view class='home_head'>
     <view class='box'>
       <view class='nav'>
