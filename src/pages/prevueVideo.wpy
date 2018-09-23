@@ -1,4 +1,5 @@
 <style lang="less">
+  @rpx : 1rpx;
   .video_container{
     height:100vh;
     background: #000;
@@ -35,6 +36,9 @@
         events = {}
 
         onLoad(option) {
+          wx.setNavigationBarTitle({
+            title: '预告片'
+          });
           this.videoUrl = option.url;
           this.$apply();
         }

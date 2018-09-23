@@ -25,7 +25,8 @@ export default class extends wepy.app {
     pages: [
 //      'pages/home',
       'pages/details',
-      'pages/prevueVideo'
+      'pages/prevueVideo',
+      'pages/photoSwiper'
     ],
     window: {
       backgroundTextStyle: 'light',

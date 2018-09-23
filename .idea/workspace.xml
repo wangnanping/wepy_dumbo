@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a4fec9-d919-4b5a-b73b-9302ebaba670" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.wepycache" afterPath="$PROJECT_DIR$/.wepycache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.wpy" afterPath="$PROJECT_DIR$/src/app.wpy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" afterPath="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/details.wpy" afterPath="$PROJECT_DIR$/src/pages/details.wpy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/home.wpy" afterPath="$PROJECT_DIR$/src/pages/home.wpy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" afterPath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +30,7 @@
                   <folding>
                     <element signature="e#1300#1689#0" expanded="false" />
                     <element signature="e#1705#3446#0" expanded="false" />
-                    <element signature="e#7000#7024#0" expanded="true" />
+                    <element signature="e#7020#7044#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -46,9 +43,21 @@
           <file leaf-file-name="prevueVideo.wpy" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pages/prevueVideo.wpy">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+                <state relative-caret-position="360">
+                  <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="photoSwiper.wpy" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/pages/photoSwiper.wpy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="63" selection-end-column="17" />
+                  <folding>
+                    <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -56,8 +65,8 @@
           <file leaf-file-name="app.wpy" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app.wpy">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="24" />
+                <state relative-caret-position="475">
+                  <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -98,10 +107,10 @@
           <file leaf-file-name="details.wpy" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="791">
-                  <caret line="273" column="41" lean-forward="false" selection-start-line="273" selection-start-column="41" selection-end-line="273" selection-end-column="41" />
+                <state relative-caret-position="146">
+                  <caret line="291" column="32" lean-forward="true" selection-start-line="291" selection-start-column="32" selection-end-line="291" selection-end-column="32" />
                   <folding>
-                    <element signature="e#7000#7024#0" expanded="true" />
+                    <element signature="e#7020#7044#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -131,6 +140,7 @@
       <find>@t</find>
       <find>dataList</find>
       <find>actor_list</find>
+      <find>detail_msg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
         <option value="$PROJECT_DIR$/src/app.wpy" />
         <option value="$PROJECT_DIR$/src/pages/details.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
         <option value="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
       </list>
     </option>
@@ -156,8 +167,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="119" />
-    <option name="y" value="253" />
+    <option name="x" value="323" />
+    <option name="y" value="287" />
     <option name="width" value="1560" />
     <option name="height" value="880" />
   </component>
@@ -285,22 +296,22 @@
       <updated>1536836496252</updated>
       <workItem from="1536836497482" duration="4205000" />
       <workItem from="1537599816524" duration="8068000" />
-      <workItem from="1537700987164" duration="5613000" />
+      <workItem from="1537700987164" duration="7919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17886000" />
+    <option name="totallyTimeSpent" value="20192000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="253" width="1560" height="880" extended-state="0" />
+    <frame x="323" y="287" width="1560" height="880" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22141919" sideWeight="0.5861071" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5861071" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22141919" sideWeight="0.4138929" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4138929" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.069986545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -331,7 +342,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7000#7024#0" expanded="true" />
+            <element signature="e#7020#7044#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -375,7 +386,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7000#7024#0" expanded="true" />
+            <element signature="e#7020#7044#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -405,14 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/home.wpy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-334">
@@ -439,20 +442,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="273" column="41" lean-forward="false" selection-start-line="273" selection-start-column="41" selection-end-line="273" selection-end-column="41" />
+        <state relative-caret-position="146">
+          <caret line="291" column="32" lean-forward="true" selection-start-line="291" selection-start-column="32" selection-end-line="291" selection-end-column="32" />
           <folding>
-            <element signature="e#7000#7024#0" expanded="true" />
+            <element signature="e#7020#7044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/photoSwiper.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="63" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/prevueVideo.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="360">
+          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding />
         </state>
       </provider>

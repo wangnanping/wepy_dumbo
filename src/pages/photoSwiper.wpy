@@ -1,0 +1,73 @@
+<style lang="less">
+  @rpx : 1rpx;
+  .photo_warp{
+    height: 100vh;
+    background: #000;
+    .photo_box{
+      padding-top:100/@rpx;
+      .detail_msg{
+        padding-top:100/@rpx;
+        padding-left: 20/@rpx;
+        padding-right:20/@rpx;
+      }
+    }
+  }
+</style>
+<template>
+  <view class="photo_warp">
+    <view class="photo_box">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" circular="{{circular}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="detail_msg" style="color:#FFB71A;font-size:14px;">
+        {{detail}}
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+
+    export default class Index extends wepy.page {
+        config = {}
+
+        components = {}
+
+        mixins = []
+
+        data = {
+          imgUrls:[],
+          indicatorDots: false,
+          autoplay: false,
+          interval: 5000,
+          duration: 1000,
+          previousMargin: 10,
+          nextMargin: 10,
+          circular: true,
+          detail: ''
+        }
+
+        computed = {}
+
+        methods = {}
+
+        events = {}
+
+        onLoad(opsiton) {
+              wx.setNavigationBarTitle({
+                title: '剧组照片'
+              });
+              let list = JSON.parse(opsiton.photo);
+              this.detail = opsiton.detail;
+              list.forEach((item) => {
+                this.imgUrls.push(item.image);
+              });
+              this.$apply();
+        }
+    }
+</script>

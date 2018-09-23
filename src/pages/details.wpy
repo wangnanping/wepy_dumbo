@@ -235,7 +235,7 @@
     </view>
 
     <!-- 剧组照片 -->
-     <view class="movies_photo">
+     <view class="movies_photo" @tap="urlToPhoto()">
         <text>剧组照片</text>
         <i class="iconfont icon-jiantouyou"></i>
      </view>
@@ -273,6 +273,11 @@
       urlToVideoPlay(videoList) {
         let url =  videoList.resource_url;
         wx.navigateTo({url: `prevueVideo?url=${url}`})
+      },
+      urlToPhoto() {
+        let list = JSON.stringify(this.detailData.photos);
+        let detail = this.detailData.summary;
+        wx.navigateTo({url: `photoSwiper?photo=${list}&detail=${detail}`})
       }
     };
     events = {};
