@@ -71,6 +71,7 @@
       }
     }
     .actor_list{
+      margin-bottom:40/@rpx;
       overflow-x: scroll;
       overflow-y: hidden;
       padding:20/@rpx 0;
@@ -81,21 +82,95 @@
       .content{
         margin-left:20/@rpx;
         .img{
-          width:80/@rpx;
-          height:120/@rpx;
+          width:131.5/@rpx;
+          height:191.5/@rpx;
           background: bisque;
         }
         .actor_name{
-           font-size:14px;
+          width:131.5/@rpx;
+          overflow      : hidden;
+          text-overflow : ellipsis;
+          white-space   : nowrap;
+          display: block;
+          font-size:12px;
+          text-align: center;
+          padding:10/@rpx;
         }
         .actor_role{
-          font-size:14px;
           color:#999;
         }
       }
       &::-webkit-scrollbar {
         display: none;
       }
+      .video_content{
+        margin-left:20/@rpx;
+        .items_msg{
+          width:400/@rpx;
+          position: relative;
+          .items_img{
+            width:100%;
+            height:240/@rpx;
+          }
+          .msg_title{
+            width:400/@rpx;
+            overflow      : hidden;
+            text-overflow : ellipsis;
+            white-space   : nowrap;
+            font-size:12px;
+            color:#999;
+          }
+          .video_icon_box{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            /*background: rgba(255,255,255,.6);*/
+            -webkit-tap-highlight-color: rgba(255,0,0,0);
+            .video_icon{
+              position: absolute;
+              top:120/@rpx;
+              left:50%;
+              width:100/@rpx;
+              height:100/@rpx;
+              margin: -50/@rpx 0 0 -50/@rpx;
+            }
+          }
+        }
+      }
+    }
+    .movies_photo{
+      margin-bottom:40/@rpx;
+      padding:20/@rpx;
+      display: flex;
+      justify-content: space-between;
+      border-top:1px solid #e5e5e5;
+      border-bottom:1px solid #e5e5e5;
+      color:#999;
+    }
+  }
+  .display_none{
+    display: none;
+  }
+  .no_data{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #FFF;
+    z-index:10;
+    text-align: center;
+    padding-top : 100/@rpx;
+    .hint_img {
+      width  : 570/@rpx;
+      height : 380/@rpx;
+    }
+    .hint_text{
+      padding: 60/@rpx  0;
+      color: #1BA37E;
+      font-size:14px;
     }
   }
 </style>
@@ -109,63 +184,102 @@
       <view class="detail_box">
         <image class="movie_img" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2529365085.jpg"></image>
         <view class="detail_msg">
-          <view class="title">碟中谍6: 全面瓦解</view>
+          <view class="title">{{detailData.original_title}}</view>
           <fivePointe :starVal.sync="twoWayStar"></fivePointe>
-          <view class="people_number items_style_color_size">(26.9万人评分)</view>
-          <view class="type items_style_color_size">动作，惊悚，冒险</view>
-          <view class="time items_style_color_size">美国/148分钟</view>
-          <view class="be_on_time items_style_color_size">20188-08-31大陆上映</view>
+          <view class="people_number items_style_color_size">({{detailData.ratings_count}}人评分)</view>
+          <view class="type items_style_color_size">{{detailData.genres}}</view>
+          <view class="time items_style_color_size">{{detailData.durations}}</view>
+          <view class="be_on_time items_style_color_size">{{detailData.pubdates}}</view>
         </view>
       </view>
     </view>
 
      <view class="text_introduce">
        <view class="text_content {{cutContentStatus ? '' : 'text_content_height'}}">
-         有时好意会造成恶果，人反而被自己所造成的结果所困扰。伊桑·亨特（汤姆·克鲁斯 饰）和他的IMF团队（亚历克·鲍德温、西蒙·佩吉、文·瑞姆斯）将在最新的电影《碟中谍6：全面瓦解》中再度回归，他们会与观众们熟悉的盟友（丽贝卡·弗格森、米歇尔·莫娜汉）一起与时间赛跑，应对一次任务中出现的意外。亨利·卡维尔、安吉拉·贝塞特和凡妮莎·柯比也将加入本片的演员阵容，电影制片人克里斯托夫·迈考利将会再度担任导演。
+        {{detailData.summary}}
        </view>
-       <view class="icon_box"><i class="{{cutContentStatus ? 'iconfont icon-jiantouxia': 'iconfont icon-jiantoushang'}}" @tap="cut()"></i></view>
+       <view class="icon_box"><i class="{{cutContentStatus ? 'iconfont icon-jiantoushang': 'iconfont icon-jiantouxia'}}" @tap="cut()"></i></view>
      </view>
 
+    <!-- 演员介绍 -->
      <view class="actor_list">
-       <repeat for="{{200}}" index="index" key="index">
+       <repeat for="{{detailData.directors}}"item="item" index="index" key="index">
          <view class="content">
-           <view class="img">
-
-           </view>
-           <text class="actor_name">王南坪</text>
-           <text class="actor_role">余文乐</text>
+           <image src="{{item.avatars.small}}" class="img"></image>
+           <text class="actor_name">{{item.name}}</text>
+           <text class="actor_role actor_name">导演</text>
+         </view>
+       </repeat>
+       <repeat for="{{detailData.casts}}"item="item" index="index" key="index">
+         <view class="content">
+           <image src="{{item.avatars.small}}" class="img"></image>
+           <text class="actor_name">{{item.name}}</text>
+           <text class="actor_role actor_name">{{item.name_en}}</text>
          </view>
        </repeat>
      </view>
 
+    <!-- 预告片栏目 -->
+    <view class="actor_list">
+      <repeat for="{{detailData.trailers}}"item="item" index="index" key="index">
+        <view class="video_content" @tap="urlToVideoPlay({{item}})">
+            <view class="items_msg">
+              <image class="items_img" src="{{item.medium}}"></image>
+              <view class="msg_title">{{item.title}}</view>
+              <view class="video_icon_box">
+                <image class="video_icon" src="https://img3.doubanio.com/f/talion/b6df390a5411896e81ad9be86a97121c17d4c805/pics/card/play-button.png"></image>
+              </view>
+            </view>
+        </view>
+      </repeat>
+    </view>
+
+    <!-- 剧组照片 -->
+     <view class="movies_photo">
+        <text>剧组照片</text>
+        <i class="iconfont icon-jiantouyou"></i>
+     </view>
 
   </view>
-
+  <view class="no_data {{noDataStatus ? '': 'display_none'}}">
+    <image class="hint_img" src="../image/nodatahome.png"></image>
+    <view class="hint_text">信息加载失败!</view>
+  </view>
 </template>
 
 <script>
   import wepy from "wepy";
   import FivePointe from "@/components/fivePointedStar/fivePointedStar";
-
+  import Loading from "@/components/loading/loading";
+  let _api = require("../api/api");
   export default class Details extends wepy.page {
     components = {
-      fivePointe: FivePointe
+      fivePointe: FivePointe,
+      loadingBox: Loading
     };
     mixins = [];
     data = {
       twoWayStar: 3,
-      cutContentStatus: false
+      cutContentStatus: false,
+      detailData: [],
+      noDataStatus: false
     };
     computed = {};
     methods = {
       cut() {
           this.cutContentStatus = ! this.cutContentStatus;
           this.$apply();
+      },
+      urlToVideoPlay(videoList) {
+        let url =  videoList.resource_url;
+        wx.navigateTo({url: `prevueVideo?url=${url}`})
       }
     };
     events = {};
 
     onLoad(option) {
+//      this.subjectIdApi(option.id);
+      this.subjectIdApi(27069427);
       this.setTwoWayStar(option);
     }
 
@@ -176,6 +290,21 @@
       });
       this.$apply();
     }
+
+    subjectIdApi(ID) {
+      _api.testFun(`/v2/movie/subject/${ID}`, "GET", null, (err, res) => {
+        if (res.statusCode === 200) {
+          this.detailData = res.data;
+          this.twoWayStar = this.detailData.rating.average;
+        } else {
+          this.noDataStatus = true;
+        }
+        this.$apply();
+      });
+    }
+
+
+
   }
 
 </script>

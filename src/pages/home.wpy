@@ -141,7 +141,7 @@
 
 </style>
 <template>
-  <i class="icon iconfont icon-jiantoushang"></i>
+  <!--<i class="icon iconfont icon-jiantoushang"></i>-->
   <view class='home_head'>
     <view class='box'>
       <view class='nav'>
@@ -271,7 +271,7 @@
         let title = '';
         this.navClassStatus !== 3 ? num = val.rating.average : num = val.subject.rating.average;
         this.navClassStatus !== 3 ? title = val.title : title = val.subject.title;
-        wx.navigateTo({url: `details?num=${num}&title=${title}`})
+        wx.navigateTo({url: `details?num=${num}&title=${title}&id=${val.id}`})
       }
     };
     events = {};

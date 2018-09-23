@@ -1,0 +1,42 @@
+<style lang="less">
+  .video_container{
+    height:100vh;
+    background: #000;
+    line-height: 100vh;
+    .video_play{
+      width:100%;
+    }
+  }
+</style>
+<template>
+    <view class="video_container">
+        <video class="video_play" autoplay src="{{videoUrl}}" binderror="videoErrorCallback" controls></video>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+
+    export default class Index extends wepy.page {
+        config = {}
+
+        components = {}
+
+        mixins = []
+
+        data = {
+          videoUrl: ''
+        }
+
+        computed = {}
+
+        methods = {}
+
+        events = {}
+
+        onLoad(option) {
+          this.videoUrl = option.url;
+          this.$apply();
+        }
+    }
+</script>

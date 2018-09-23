@@ -24,7 +24,8 @@ export default class extends wepy.app {
   config = {
     pages: [
 //      'pages/home',
-      'pages/details'
+      'pages/details',
+      'pages/prevueVideo'
     ],
     window: {
       backgroundTextStyle: 'light',
