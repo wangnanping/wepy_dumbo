@@ -226,7 +226,7 @@
         <image class="movie_img" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2529365085.jpg"></image>
         <view class="detail_msg">
           <view class="title">{{detailData.original_title}}</view>
-          <fivePointe :starVal.sync="twoWayStar"></fivePointe>
+          <fivePointe :starVal.sync="twoWayStar" showVal="true"></fivePointe>
           <view class="people_number items_style_color_size">({{detailData.ratings_count}}人评分)</view>
           <view class="type items_style_color_size">{{detailData.genres}}</view>
           <view class="time items_style_color_size">{{detailData.durations}}</view>
@@ -292,7 +292,7 @@
             <view class="r_content">
               <view class="r_c_head">
                  <view class="r_user_name">{{item.author.name}}</view>
-                <fivePointe :starVal.sync="item.rating.value/5*10"></fivePointe>
+                <rFivePointe :starVal.sync="item.rating.value/5*10" showVal="false"></rFivePointe>
               </view>
               <view class="r_c_msg">
                {{item.summary}}
@@ -317,6 +317,7 @@
   export default class Details extends wepy.page {
     components = {
       fivePointe: FivePointe,
+      rFivePointe: FivePointe,
       loadingBox: Loading
     };
     mixins = [];

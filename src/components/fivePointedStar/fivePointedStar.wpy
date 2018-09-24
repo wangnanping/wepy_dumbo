@@ -16,6 +16,9 @@
       color: #ffc600;
       font-weight: bold;
     }
+    .hide{
+      display: none;
+    }
   }
 </style>
 
@@ -26,7 +29,7 @@
       <image class="{{starVal > (index+1)*2 - 2 &&  starVal <= (index+1)*2 -1 ? 'star_times' : 'show_style'}}" src="../../image/star-half-new.png"></image>
       <image class="{{starVal === 0 || starVal <= (index+1)*2-2 ? 'star_times' : 'show_style'}}" src="../../image/star-empty-new.png"></image>
     </repeat>
-    <text class="num">{{starVal}}</text>
+    <text class="num {{showVal === 'false' ? 'hide': ''}}">{{starVal}}</text>
   </view>
 </template>
 
@@ -43,13 +46,16 @@
       starVal: {
         type: Number,
         default: 0
+      },
+      showVal: {
+//        type: String,
+        default: true
       }
     }
     computed = {};
     methods = {};
     events = {};
     onLoad() {
-      console.log(this.starVal);
     }
   }
 
