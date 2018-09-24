@@ -149,6 +149,47 @@
       border-bottom:1px solid #e5e5e5;
       color:#999;
     }
+    .reviews_warp{
+      margin-bottom:40/@rpx;
+      padding:20/@rpx;
+      border-top:1px solid #e5e5e5;
+      border-bottom:1px solid #e5e5e5;
+      .r_title{
+        font-size:16px;
+        color:#999;
+      }
+      .r_items{
+        padding-top:20/@rpx;
+        display: flex;
+        justify-content: start;
+        .r_people_user{
+          padding-right:30/@rpx;
+          .user_img{
+            width:80/@rpx;
+            height:80/@rpx;
+            border-radius: 80/@rpx;
+          }
+        }
+        .r_content{
+          width:100%;
+          .r_c_head{
+            display: flex;
+            justify-content: start;
+            align-items:center;
+            .r_user_name{
+              font-size:14px;
+              margin-right:20/@rpx;
+            }
+          }
+          .r_c_msg{
+            padding:20/@rpx 0;
+            font-size:12px;
+            line-height: 40/@rpx;
+            color:#999;
+          }
+        }
+      }
+    }
   }
   .display_none{
     display: none;
@@ -238,6 +279,27 @@
      <view class="movies_photo" @tap="urlToPhoto()">
         <text>剧组照片</text>
         <i class="iconfont icon-jiantouyou"></i>
+     </view>
+
+     <!--优质影评-->
+     <view class="reviews_warp">
+        <text class="r_title">最受欢迎的短评</text>
+        <repeat for="{{detailData.popular_reviews}}"item="item" index="index" key="index">
+          <view class="r_items">
+             <view class="r_people_user">
+               <image class="user_img" src="{{item.author.avatar}}"></image>
+             </view>
+            <view class="r_content">
+              <view class="r_c_head">
+                 <view class="r_user_name">{{item.author.name}}</view>
+                <fivePointe :starVal.sync="item.rating.value/5*10"></fivePointe>
+              </view>
+              <view class="r_c_msg">
+               {{item.summary}}
+              </view>
+            </view>
+          </view>
+        </repeat>
      </view>
 
   </view>

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a4fec9-d919-4b5a-b73b-9302ebaba670" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.wpy" afterPath="$PROJECT_DIR$/src/app.wpy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" afterPath="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/details.wpy" afterPath="$PROJECT_DIR$/src/pages/details.wpy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" afterPath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,18 +16,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.17468354">
+    <splitter split-orientation="horizontal" split-proportion="0.60466814">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="fivePointedStar.wpy" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="235">
+                  <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="details.wpy" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="149" column="17" lean-forward="false" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
+                <state relative-caret-position="354">
+                  <caret line="298" column="21" lean-forward="false" selection-start-line="298" selection-start-column="21" selection-end-line="298" selection-end-column="21" />
                   <folding>
-                    <element signature="e#1300#1689#0" expanded="false" />
-                    <element signature="e#1705#3446#0" expanded="false" />
-                    <element signature="e#7020#7044#0" expanded="true" />
+                    <element signature="e#8743#8767#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -39,78 +44,14 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="prevueVideo.wpy" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/pages/prevueVideo.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="photoSwiper.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pages/photoSwiper.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="63" selection-end-column="17" />
-                  <folding>
-                    <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pages/home.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-334">
-                  <caret line="273" column="78" lean-forward="true" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="78" />
-                  <folding>
-                    <element signature="e#5274#5298#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="loading.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/loading/loading.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fivePointedStar.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="700">
-                  <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="details.wpy" pinned="false" current-in-tab="false">
+        <leaf>
+          <file leaf-file-name="details.wpy" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="291" column="32" lean-forward="true" selection-start-line="291" selection-start-column="32" selection-end-line="291" selection-end-column="32" />
+                <state relative-caret-position="268">
+                  <caret line="165" column="32" lean-forward="true" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
                   <folding>
-                    <element signature="e#7020#7044#0" expanded="true" />
+                    <element signature="e#8743#8767#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -131,16 +72,17 @@
     <findStrings>
       <find>skipUrl</find>
       <find>setTwoWayStar</find>
-      <find>twoWayStar</find>
       <find>no_data</find>
       <find>genres</find>
       <find>starVal</find>
       <find>actor_name</find>
       <find>tags</find>
-      <find>@t</find>
       <find>dataList</find>
-      <find>actor_list</find>
       <find>detail_msg</find>
+      <find>@t</find>
+      <find>actor_list</find>
+      <find>movies_photo</find>
+      <find>twoWayStar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,11 +92,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/pages/home.wpy" />
-        <option value="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
         <option value="$PROJECT_DIR$/src/app.wpy" />
-        <option value="$PROJECT_DIR$/src/pages/details.wpy" />
         <option value="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
         <option value="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
+        <option value="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/details.wpy" />
       </list>
     </option>
   </component>
@@ -167,10 +109,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="323" />
-    <option name="y" value="287" />
-    <option name="width" value="1560" />
-    <option name="height" value="880" />
+    <option name="x" value="80" />
+    <option name="y" value="114" />
+    <option name="width" value="1794" />
+    <option name="height" value="894" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -226,6 +168,13 @@
               <item name="wepy_dumbo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy_dumbo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy_dumbo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="fivePointedStar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wepy_dumbo" type="b2602c69:ProjectViewProjectNode" />
@@ -296,23 +245,23 @@
       <updated>1536836496252</updated>
       <workItem from="1536836497482" duration="4205000" />
       <workItem from="1537599816524" duration="8068000" />
-      <workItem from="1537700987164" duration="7919000" />
+      <workItem from="1537700987164" duration="11151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20192000" />
+    <option name="totallyTimeSpent" value="23424000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="323" y="287" width="1560" height="880" extended-state="0" />
+    <frame x="80" y="114" width="1794" height="894" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5861071" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2192483" sideWeight="0.5859031" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4138929" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.069986545" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2192483" sideWeight="0.41409692" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1003963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -342,7 +291,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7020#7044#0" expanded="true" />
+            <element signature="e#8743#8767#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -386,7 +335,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7020#7044#0" expanded="true" />
+            <element signature="e#8743#8767#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -434,29 +383,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.wpy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="291" column="32" lean-forward="true" selection-start-line="291" selection-start-column="32" selection-end-line="291" selection-end-column="32" />
-          <folding>
-            <element signature="e#7020#7044#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -472,9 +403,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/prevueVideo.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="975">
           <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="165" column="32" lean-forward="true" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
+          <folding>
+            <element signature="e#8743#8767#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

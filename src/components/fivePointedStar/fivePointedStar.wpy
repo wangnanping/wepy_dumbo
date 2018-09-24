@@ -49,6 +49,7 @@
     methods = {};
     events = {};
     onLoad() {
+      console.log(this.starVal);
     }
   }
 
