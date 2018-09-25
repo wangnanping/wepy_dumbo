@@ -223,7 +223,7 @@
       <view class="module_background">
       </view>
       <view class="detail_box">
-        <image class="movie_img" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2529365085.jpg"></image>
+        <image class="movie_img" src="{{detailData.images.medium}}"></image>
         <view class="detail_msg">
           <view class="title">{{detailData.original_title}}</view>
           <fivePointe :starVal.sync="twoWayStar" showVal="true"></fivePointe>
@@ -263,7 +263,7 @@
     <!-- 预告片栏目 -->
     <view class="actor_list">
       <repeat for="{{detailData.trailers}}"item="item" index="index" key="index">
-        <view class="video_content" @tap="urlToVideoPlay({{item}})">
+        <view class="video_content" @tap="urlToVideoPlay({{index}})">
             <view class="items_msg">
               <image class="items_img" src="{{item.medium}}"></image>
               <view class="msg_title">{{item.title}}</view>
@@ -333,9 +333,9 @@
           this.cutContentStatus = ! this.cutContentStatus;
           this.$apply();
       },
-      urlToVideoPlay(videoList) {
-        let url =  videoList.resource_url;
-        wx.navigateTo({url: `prevueVideo?url=${url}`})
+      urlToVideoPlay(index) {
+        let videoList = JSON.stringify(this.detailData.trailers);
+        wx.navigateTo({url: `prevueVideo?index=${index}&videoList=${encodeURIComponent(videoList)}`})
       },
       urlToPhoto() {
         let list = JSON.stringify(this.detailData.photos);
@@ -346,8 +346,8 @@
     events = {};
 
     onLoad(option) {
-//      this.subjectIdApi(option.id);
-      this.subjectIdApi(27069427);
+      this.subjectIdApi(option.id);
+//      this.subjectIdApi(27069427);
       this.setTwoWayStar(option);
     }
 
