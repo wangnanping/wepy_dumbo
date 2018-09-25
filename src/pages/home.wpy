@@ -49,10 +49,10 @@
         justify-content : start;
         align-items     : center;
         .film {
-          width  : 100/@rpx;
+          width  : 120/@rpx;
           .film_img {
-            width  : 100/@rpx;
-            height : 140/@rpx;
+            width  : 120/@rpx;
+            height : 180/@rpx;
           }
         }
         .film_msg {
@@ -159,8 +159,7 @@
       <view class="c_li">
         <view class='c_li_box'>
           <view class="film">
-            <image class='film_img'
-                   src="{{navClassStatus !== 3 ? item.images.small : item.subject.images.small}}"></image>
+            <image class='film_img' src="{{navClassStatus !== 3 ? item.images.small : item.subject.images.small}}"></image>
           </view>
           <view class='film_msg film_white_space'>
             <view class='film_title  film_white_space'>{{navClassStatus !== 3 ? item.title : item.subject.title}}</view>
