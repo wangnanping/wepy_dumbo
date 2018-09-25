@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="65a4fec9-d919-4b5a-b73b-9302ebaba670" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" afterPath="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/details.wpy" afterPath="$PROJECT_DIR$/src/pages/details.wpy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/photoSwiper.wpy" afterPath="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" afterPath="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,62 +18,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4621588">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="fivePointedStar.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="767">
-                  <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="details.wpy" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="254">
-                  <caret line="228" column="62" lean-forward="false" selection-start-line="228" selection-start-column="62" selection-end-line="228" selection-end-column="62" />
-                  <folding>
-                    <element signature="e#8776#8800#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.wpy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pages/home.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2725">
-                  <caret line="273" column="78" lean-forward="true" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="78" />
-                  <folding>
-                    <element signature="e#5274#5298#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="details.wpy" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="294" column="83" lean-forward="true" selection-start-line="294" selection-start-column="68" selection-end-line="294" selection-end-column="83" />
-                  <folding>
-                    <element signature="e#8776#8800#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.wpy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app.wpy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="details.wpy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1212">
+              <caret line="118" column="35" lean-forward="true" selection-start-line="115" selection-start-column="11" selection-end-line="118" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photoSwiper.wpy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/photoSwiper.wpy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prevueVideo.wpy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/prevueVideo.wpy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -96,6 +83,13 @@
       <find>actor_list</find>
       <find>movies_photo</find>
       <find>twoWayStar</find>
+      <find>parse</find>
+      <find>video</find>
+      <find>videoList</find>
+      <find>urlToVideoPlay</find>
+      <find>items_img</find>
+      <find>items_msg</find>
+      <find>opsiton</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,10 +100,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/pages/home.wpy" />
         <option value="$PROJECT_DIR$/src/app.wpy" />
-        <option value="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
-        <option value="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
         <option value="$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/photoSwiper.wpy" />
         <option value="$PROJECT_DIR$/src/pages/details.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/prevueVideo.wpy" />
       </list>
     </option>
   </component>
@@ -122,8 +116,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="191" />
+    <option name="x" value="967" />
+    <option name="y" value="128" />
     <option name="width" value="1794" />
     <option name="height" value="894" />
   </component>
@@ -237,7 +231,7 @@
       <scripts>
         <script value="dev" />
       </scripts>
-      <node-interpreter value="E:/node" />
+      <node-interpreter value="D:/node" />
       <envs />
     </configuration>
     <recent_temporary>
@@ -259,26 +253,27 @@
       <workItem from="1536836497482" duration="4205000" />
       <workItem from="1537599816524" duration="8068000" />
       <workItem from="1537700987164" duration="13092000" />
+      <workItem from="1537837777241" duration="7901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25365000" />
+    <option name="totallyTimeSpent" value="33266000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="191" width="1794" height="894" extended-state="0" />
+    <frame x="967" y="128" width="1794" height="894" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.082004555" sideWeight="0.5859031" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1856492" sideWeight="0.57856095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.082004555" sideWeight="0.41409692" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1003963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1856492" sideWeight="0.42143905" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -299,13 +294,63 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1537837604584" expanded="true" signature="47:326" ph="{...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1334" ph="{&quot;type&quot;: Number...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1340" ph="{...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1429" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6256">
+          <caret line="273" column="65" lean-forward="true" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="65" />
+          <folding>
+            <marker date="1537837604587" expanded="true" signature="7134:7146" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:7152" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8585" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8594" ph="..." />
+            <marker date="1537837604587" expanded="true" signature="7185:7221" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7227:7317" ph="/*...*/" />
+            <marker date="1537837604587" expanded="true" signature="7338:7635" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7411:7627" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7487:7543" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7549:7596" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7657:7954" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7730:7946" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7806:7862" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7868:7915" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7975:8271" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8047:8263" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8123:8179" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8185:8232" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8289:8581" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8357:8573" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8433:8489" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8495:8542" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#8776#8800#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -322,7 +367,28 @@
         <state relative-caret-position="2975">
           <caret line="119" column="27" lean-forward="true" selection-start-line="117" selection-start-column="3" selection-end-line="119" selection-end-column="27" />
           <folding>
-            <element signature="e#5274#5298#0" expanded="true" />
+            <marker date="1537837604587" expanded="true" signature="7134:7146" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:7152" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8585" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8594" ph="..." />
+            <marker date="1537837604587" expanded="true" signature="7185:7221" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7227:7317" ph="/*...*/" />
+            <marker date="1537837604587" expanded="true" signature="7338:7635" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7411:7627" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7487:7543" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7549:7596" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7657:7954" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7730:7946" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7806:7862" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7868:7915" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7975:8271" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8047:8263" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8123:8179" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8185:8232" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8289:8581" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8357:8573" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8433:8489" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8495:8542" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -339,7 +405,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
+          <folding>
+            <marker date="1537837604584" expanded="true" signature="47:326" ph="{...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1334" ph="{&quot;type&quot;: Number...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1340" ph="{...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1429" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -347,9 +418,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#8776#8800#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -358,7 +427,28 @@
         <state relative-caret-position="3675">
           <caret line="147" column="15" lean-forward="false" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="15" />
           <folding>
-            <element signature="e#5274#5298#0" expanded="true" />
+            <marker date="1537837604587" expanded="true" signature="7134:7146" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:7152" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8585" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8594" ph="..." />
+            <marker date="1537837604587" expanded="true" signature="7185:7221" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7227:7317" ph="/*...*/" />
+            <marker date="1537837604587" expanded="true" signature="7338:7635" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7411:7627" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7487:7543" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7549:7596" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7657:7954" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7730:7946" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7806:7862" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7868:7915" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7975:8271" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8047:8263" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8123:8179" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8185:8232" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8289:8581" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8357:8573" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8433:8489" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8495:8542" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -386,9 +476,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6256">
+          <caret line="273" column="78" lean-forward="false" selection-start-line="273" selection-start-column="74" selection-end-line="273" selection-end-column="78" />
+          <folding>
+            <marker date="1537837604587" expanded="true" signature="7134:7146" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:7152" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8585" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7134:8594" ph="..." />
+            <marker date="1537837604587" expanded="true" signature="7185:7221" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7227:7317" ph="/*...*/" />
+            <marker date="1537837604587" expanded="true" signature="7338:7635" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7411:7627" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7487:7543" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7549:7596" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7657:7954" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7730:7946" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7806:7862" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7868:7915" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="7975:8271" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8047:8263" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8123:8179" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8185:8232" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8289:8581" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8357:8573" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8433:8489" ph="{...}" />
+            <marker date="1537837604587" expanded="true" signature="8495:8542" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <marker date="1537837604584" expanded="true" signature="47:326" ph="{...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1334" ph="{&quot;type&quot;: Number...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1340" ph="{...}" />
+            <marker date="1537837604584" expanded="true" signature="1326:1429" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="437">
           <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
         </state>
@@ -396,47 +530,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/photoSwiper.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="63" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="253">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/prevueVideo.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/home.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2725">
-          <caret line="273" column="78" lean-forward="true" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="78" />
-          <folding>
-            <element signature="e#5274#5298#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/fivePointedStar/fivePointedStar.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        <state relative-caret-position="289">
+          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/details.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="228" column="62" lean-forward="false" selection-start-line="228" selection-start-column="62" selection-end-line="228" selection-end-column="62" />
-          <folding>
-            <element signature="e#8776#8800#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1212">
+          <caret line="118" column="35" lean-forward="true" selection-start-line="115" selection-start-column="11" selection-end-line="118" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

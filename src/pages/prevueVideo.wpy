@@ -3,16 +3,69 @@
   .video_container{
     height:100vh;
     background: #000;
-    line-height: 100vh;
+    /*line-height: 100vh;*/
     .video_play{
       width:100%;
     }
+    .recommend_warp{
+      padding:0 20/@rpx;
+      margin:20/@rpx 0;
+      display: flex;
+      align-items: center;
+      .recommend_see{
+        position: relative;
+        .recommend_video{
+          width:200/@rpx;
+          height:100/@rpx;
+        }
+        .video_icon_box{
+          position: absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+          /*background: rgba(255,255,255,.6);*/
+          -webkit-tap-highlight-color: rgba(255,0,0,0);
+          .video_icon{
+            position: absolute;
+            top:50%;
+            left:50%;
+            width:50/@rpx;
+            height:50/@rpx;
+            margin: -25/@rpx 0 0 -25/@rpx;
+          }
+        }
+      }
+      .recommend_text{
+        display: block;
+        width:400/@rpx;
+        overflow      : hidden;
+        text-overflow : ellipsis;
+        white-space   : nowrap;
+        font-size:16px;
+        color:#999;
+        margin-left:40/@rpx;
+      }
+    }
   }
+
 </style>
 <template>
     <view class="video_container">
         <video class="video_play" autoplay src="{{videoUrl}}" binderror="videoErrorCallback" controls></video>
+        <repeat for="{{videoList}}"item="item" index="index" key="index">
+          <view class="recommend_warp">
+            <view class="recommend_see">
+              <image class="recommend_video" src="{{item.medium}}"></image>
+              <view class="video_icon_box">
+                <image class="video_icon" src="https://img3.doubanio.com/f/talion/b6df390a5411896e81ad9be86a97121c17d4c805/pics/card/play-button.png"></image>
+              </view>
+            </view>
+            <text class="recommend_text">{{item.title}}</text>
+          </view>
+        </repeat>
     </view>
+
 </template>
 
 <script>
@@ -26,7 +79,10 @@
         mixins = []
 
         data = {
-          videoUrl: ''
+          videoUrl: '',
+          videoList: [],
+          indexVal: '',
+          recommendList: []
         }
 
         computed = {}
@@ -35,11 +91,18 @@
 
         events = {}
 
-        onLoad(option) {
+        onLoad(opsiton) {
           wx.setNavigationBarTitle({
             title: '预告片'
           });
-          this.videoUrl = option.url;
+          this.videoList = JSON.parse(decodeURIComponent(opsiton.videoList));
+          this.indexVal = opsiton.index;
+          this.videoList.forEach((item, index) => {
+            if (parseInt(this.indexVal) === index) {
+              this.videoUrl = item.resource_url;
+              return false;
+            }
+          });
           this.$apply();
         }
     }
