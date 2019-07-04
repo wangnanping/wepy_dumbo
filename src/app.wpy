@@ -25,14 +25,14 @@ export default class extends wepy.app {
     pages: [
       'pages/home',
       'pages/details',
-      'pages/prevueVideo',
+      // 'pages/prevueVideo',
       'pages/photoSwiper'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#1BA37E',
       navigationBarTitleText: '小象推影',
-      navigationBarTextStyle: '#FFF'
+      navigationBarTextStyle: 'white'
     }
   }
 

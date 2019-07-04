@@ -262,7 +262,7 @@
 
     <!-- 预告片栏目 -->
     <view class="actor_list">
-      <repeat for="{{detailData.trailers}}"item="item" index="index" key="index">
+      <repeat for="{{detailData.trailers}}" item="item" index="index" key="index">
         <view class="video_content" @tap="urlToVideoPlay({{index}})">
             <view class="items_msg">
               <image class="items_img" src="{{item.medium}}"></image>
@@ -334,8 +334,8 @@
           this.$apply();
       },
       urlToVideoPlay(index) {
-        let videoList = JSON.stringify(this.detailData.trailers);
-        wx.navigateTo({url: `prevueVideo?index=${index}&videoList=${encodeURIComponent(videoList)}`})
+        // let videoList = JSON.stringify(this.detailData.trailers);
+        // wx.navigateTo({url: `prevueVideo?index=${index}&videoList=${encodeURIComponent(videoList)}`})
       },
       urlToPhoto() {
         let list = JSON.stringify(this.detailData.photos);

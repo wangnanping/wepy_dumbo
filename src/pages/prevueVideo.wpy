@@ -60,7 +60,7 @@
     <view class="video_container">
         <video class="video_play" autoplay src="{{videoUrl}}" binderror="videoErrorCallback" controls></video>
         <view class="recommend_content">
-          <repeat for="{{videoList}}"item="item" index="index" key="index">
+          <repeat for="{{videoList}}" item="item" index="index" key="index">
             <view class="recommend_warp" @tap="videoPlay({{index}})">
               <view class="recommend_see">
                 <image class="recommend_video" src="{{item.medium}}"></image>
