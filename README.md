@@ -1,8 +1,5 @@
-<img width="300"  src="https://github.com/wangnanping/wepy_dumbo/blob/master/exhibition/IMG_2859.PNG"></img>
-<img width="300"  src="https://github.com/wangnanping/wepy_dumbo/blob/master/exhibition/IMG_2860.PNG"></img>
-<img width="300"  src="https://github.com/wangnanping/wepy_dumbo/blob/master/exhibition/IMG_2861.PNG"></img>
-<img width="300"  src="https://github.com/wangnanping/wepy_dumbo/blob/master/exhibition/IMG_2862.PNG"></img>
- 
+<img width="300"  src="https://github.com/wangnanping/wepy_dumbo/blob/master/exhibition/GIF.gif">
+<br>
  1.用vscode等打开<br>
 
  2.npm install(cnpm install)<br>
